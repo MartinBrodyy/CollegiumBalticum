@@ -3,47 +3,31 @@ import time
 
 turtle.speed(10)
 
-wiersze = input("Podaj ilość wierszy: ")
-wiersze = int(wiersze)
-kolumny = input("Podaj ilość kolumn: ")
-kolumny = int(kolumny)
-wielkosc = input("Podaj wielkosc kwadratu: ")
-wielkosc= int(wielkosc)
+sNumberOfRows = input("Enter the number of rows: ")
+iNumberOfRows = int(sNumberOfRows)
+sNumberOfColumn = input("Enter the number of columns: ")
+iNumberOfColumn = int(sNumberOfColumn)
+sSizeOfSquare = input("Enter the size of the squares: ")
+iSizeOfSquare= int(sSizeOfSquare)
 
-def kwadrat():
+lColorList = ["black", "white"]
+
+def square():
     for i in range(4):
-        turtle.forward(wielkosc)
+        turtle.forward(iSizeOfSquare)
         turtle.right(90)
 
-for i in range(wiersze):
-    for j in range(kolumny):
+for i in range(iNumberOfRows):
+    for j in range(iNumberOfColumn):
         turtle.penup()
-        turtle.goto(j * wielkosc, i * wielkosc)
+        turtle.goto(j * iSizeOfSquare, i * iSizeOfSquare)
         turtle.pendown()
         if(i%2==0):
-            if(j%2==0):
-                turtle.fillcolor("black")
-            else:
-                turtle.fillcolor("white")
+            turtle.fillcolor(lColorList[j%2==0])
         else:
-            if (j%2 == 0):
-                turtle.fillcolor("white")
-            else:
-                turtle.fillcolor("black")
+            turtle.fillcolor(lColorList[j%2!=0])
         turtle.begin_fill()
-        kwadrat()
+        square()
         turtle.end_fill()
 
 time.sleep(10)
-
-# 1. Proszę pamiętać że programujemy po angielsku :)
-# 2. Fajnie że nazwy zmiennych są czytelne. Proszę tylko zastosować język angielski i pewną konwencję, np.
-# camelCase: czyliNazwaJestPisanaWTenSposób
-# zmienne_oddzielone_dolnymi_spacjami
-# sNameOfUser
-# iNumberOfColumn
-# to już jest idealne nazwenictwo: Po angielsku, czytelne, oraz pokazuje jakiego typu jest zmienna.
-# 3. Mega zwięźle napisane, chyba najkrótszy kod do tej pory jaki widziałem ;)
-# 4. Gdyby się uprzeć, można sparametryzować także kolory. Zamiast black/white, można stworzyć listę kolorów i używać ich jako param:
-# lColorList = ["black", "white"]
-# następnie posługując sie lColorList[j%2==0] wybierze sam odpowiedni kolor ;)
