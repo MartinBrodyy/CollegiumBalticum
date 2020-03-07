@@ -35,3 +35,15 @@ for i in range(wiersze):
         turtle.end_fill()
 
 time.sleep(10)
+
+# 1. Proszę pamiętać że programujemy po angielsku :)
+# 2. Fajnie że nazwy zmiennych są czytelne. Proszę tylko zastosować język angielski i pewną konwencję, np.
+# camelCase: czyliNazwaJestPisanaWTenSposób
+# zmienne_oddzielone_dolnymi_spacjami
+# sNameOfUser
+# iNumberOfColumn
+# to już jest idealne nazwenictwo: Po angielsku, czytelne, oraz pokazuje jakiego typu jest zmienna.
+# 3. Mega zwięźle napisane, chyba najkrótszy kod do tej pory jaki widziałem ;)
+# 4. Gdyby się uprzeć, można sparametryzować także kolory. Zamiast black/white, można stworzyć listę kolorów i używać ich jako param:
+# lColorList = ["black", "white"]
+# następnie posługując sie lColorList[j%2==0] wybierze sam odpowiedni kolor ;)
